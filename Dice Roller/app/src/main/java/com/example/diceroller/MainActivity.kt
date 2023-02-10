@@ -6,6 +6,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.widget.Toast
+import java.util.*
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
