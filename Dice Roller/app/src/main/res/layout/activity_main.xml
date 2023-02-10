@@ -13,7 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/dice_roll_empty" />
+        app:srcCompat="@drawable/dice_roll_empty"
+        tools:srcCompat = "@drawable/dice_roll_1"
+        />
     <TextView
         android:id="@+id/Dice_Number_txtview"
         android:layout_width="wrap_content"

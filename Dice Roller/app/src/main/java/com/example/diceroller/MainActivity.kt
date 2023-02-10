@@ -1,13 +1,11 @@
 package com.example.diceroller
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import java.util.*
+import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         var total = 0
 
         fun random_no(): Unit {
-            val randomValues = Random.nextInt(0, 6) + 1 // as dice value start from 1 - 6
+            val randomValues = Random.nextInt(0, 5) + 1 // as dice value start from 1 - 6
             val roll = randomValues
             when (roll) {
 //                1 -> Log.d("Test Debug", "Print 1")
@@ -55,3 +53,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
+
+
