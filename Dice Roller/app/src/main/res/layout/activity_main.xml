@@ -1,37 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/diceImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/dice_roll_empty"
-        tools:srcCompat = "@drawable/dice_roll_1"
-        />
-    <TextView
-        android:id="@+id/Dice_Number_txtview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/Dice_Number"
-        android:textSize="30sp" />
+    <data>
+    <variable
+        name="data"
+        type="com.example.diceroller.DataBinding" />
+    </data>
 
-    <Button
-        android:id="@+id/roll_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/roll" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
 
+        <ImageView
+            android:id="@+id/diceImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/dice_roll_empty"
+            tools:srcCompat="@drawable/dice_roll_1" />
+
+        <TextView
+            android:id="@+id/Dice_Number_txtview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@{data.diceText}"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/roll_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/roll" />
+
+    </LinearLayout>
+</layout>
 
 
-</LinearLayout>
+
