@@ -15,9 +15,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // here we are using DataBindingUtil to access the UI elements from R class
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        val dataBindingObj = DataBinding("Roll your Dice") //
-        binding.data = dataBindingObj //
+
+        // dataBindingObj is a obj  of dataclass DataBinding
+        val dataBindingObj = DataBinding("Roll your Dice")
+
+        //Now here we made binding . variable name in data of xml =  dataBindingObj
+        binding.data = dataBindingObj
+
+        
 
 
         var total = 0
