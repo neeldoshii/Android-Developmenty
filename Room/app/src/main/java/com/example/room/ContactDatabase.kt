@@ -7,4 +7,6 @@ import androidx.room.RoomDatabase
 abstract class ContactDatabase : RoomDatabase() {
     // created a abstract function which will inherit Dao
     abstract fun contactDao() : ContactDao
+
+
 }

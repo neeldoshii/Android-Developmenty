@@ -5,7 +5,7 @@ import androidx.room.*
 
 @Dao
 interface ContactDao {
-    @Insert
+    @Insert (onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertContact(Contact : Contact)
 
     @Update
@@ -14,7 +14,7 @@ interface ContactDao {
     @Delete
     suspend fun  deleteContact(Contact: Contact)
 
-    @Query("SELECT * FROM contactDao")
-    fun  getAllContact() : LiveData<List<Contact>>
+    @Query("SELECT * FROM Contact")
+    fun getAllContact() : LiveData<List<Contact>>
 
 }
