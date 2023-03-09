@@ -14,7 +14,7 @@ interface ContactDao {
     @Delete
     suspend fun  deleteContact(Contact: Contact)
 
-    @Query("SELECT * FROM Contact")
+    @Query("SELECT * FROM ${Contact.TABLE_NAME}")
     fun getAllContact() : LiveData<List<Contact>>
 
 }

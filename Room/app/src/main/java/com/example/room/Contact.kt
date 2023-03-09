@@ -10,6 +10,13 @@ data class Contact(
     val firstName: String,
     val lastName: String,
     val phoneNo: Long
-
-
 )
+
+{
+    companion object {
+        const val TABLE_NAME = "Contact"
+    }
+}
+
+
+
