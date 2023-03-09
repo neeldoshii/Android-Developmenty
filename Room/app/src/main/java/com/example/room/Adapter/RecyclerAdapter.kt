@@ -20,7 +20,12 @@ class RecyclerAdapter(val contact: List<Contact>) : Adapter<RecyclerAdapter.Recy
     }
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
-        Log.d("Neel", contact[position].phoneNo.toString())
+        Log.d("Tag1", contact[position].id.toString())
+        Log.d("Tag2", contact[position].firstName.toString())
+        Log.d("Tag3", contact[position].lastName.toString())
+        Log.d("Tag3", contact[position].phoneNo.toString())
+
+        holder.id.text = contact[position].id.toString()
         holder.firstName.text = contact[position].firstName
         holder.lastName.text = contact[position].lastName
         holder.phoneNo.text = contact[position].phoneNo.toString()
@@ -35,6 +40,7 @@ class RecyclerAdapter(val contact: List<Contact>) : Adapter<RecyclerAdapter.Recy
         val firstName = itemView.findViewById<TextView>(R.id.FirstName)
         val lastName = itemView.findViewById<TextView>(R.id.LastName)
         val phoneNo = itemView.findViewById<TextView>(R.id.phoneNo)
+        val id = itemView.findViewById<TextView>(R.id.idTV)
 
     }
 

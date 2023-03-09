@@ -22,11 +22,12 @@ class MainActivity : AppCompatActivity() {
 
         val rvlayout = findViewById<RecyclerView>(R.id.rvlayout)
         database =
-            Room.databaseBuilder(applicationContext, ContactDatabase::class.java, "Contact").fallbackToDestructiveMigration().build()
+            Room.databaseBuilder(applicationContext, ContactDatabase::class.java, "Contact")
+                .fallbackToDestructiveMigration().build()
 
         GlobalScope.launch {
 // Static Data used couroutine as Room DB does not work on main thread
-            database.contactDao().insertContact(Contact(1, "Neel", "Doshi", "9999999999"))
+//            database.contactDao().insertContact(Contact(1, "Neel", "Doshi", "9999999999"))
 //            database.contactDao().insertContact(Contact(2, "Sid", "Jondhale", 8888888888))
 //            database.contactDao().insertContact(Contact(3, "Aryaman", "Mishra", 7777777777))
 //            database.contactDao().insertContact(Contact(4, "Aryaman", "Mishra", 7777777777))
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val addbtn = findViewById<Button>(R.id.addBtn)
-
+        var i:Int = 0
         addbtn.setOnClickListener {
             val firstName = etFirstName.text.toString()
             val lastName = etLastName.text.toString()
@@ -55,8 +56,9 @@ class MainActivity : AppCompatActivity() {
 
 
             GlobalScope.launch {
-                database.contactDao().insertContact(Contact(1,firstName, lastName, phoneNo))
+                database.contactDao().insertContact(Contact(i, firstName, lastName, phoneNo))
             }
+            i++
 
         }
     }
