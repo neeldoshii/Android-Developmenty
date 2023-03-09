@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val addbtn = findViewById<Button>(R.id.addBtn)
-        var i = 1
+
         addbtn.setOnClickListener {
             val firstName = etFirstName.text.toString()
             val lastName = etLastName.text.toString()
@@ -55,9 +55,9 @@ class MainActivity : AppCompatActivity() {
 
 
             GlobalScope.launch {
-                database.contactDao().insertContact(Contact(i, firstName, lastName, phoneNo))
+                database.contactDao().insertContact(Contact(1,firstName, lastName, phoneNo))
             }
-            i+=1
+
         }
     }
 
