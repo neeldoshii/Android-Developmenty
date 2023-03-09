@@ -27,7 +27,7 @@
             android:padding="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName1"
+            android:id="@+id/etLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -47,10 +47,12 @@
             android:padding="16sp" />
 
         <Button
+            android:id="@+id/addBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="add" />
+            android:text="add"
+            android:onClick="addBtnTapped"/>
 
     </LinearLayout>
 
