@@ -2,18 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Splash_Screen.SplashScreenActivity"
-    android:orientation="vertical">
+    tools:context=".Splash_Screen.SplashScreenActivity">
 
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:cropToPadding="false"
-        android:scaleType="center"
-        android:src="@drawable/splash_screen" />
+        android:src="@drawable/splash_screen"
+        android:contentDescription="TODO" />
 
 </LinearLayout>
