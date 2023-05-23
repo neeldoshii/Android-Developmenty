@@ -11,7 +11,8 @@ import com.example.room.Contact
 import com.example.room.R
 
 
-class RecyclerAdapter(val contact: List<Contact>) : Adapter<RecyclerAdapter.RecyclerViewHolder>() {
+class
+RecyclerAdapter(val contact: List<Contact>) : Adapter<RecyclerAdapter.RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.recycler_item, parent, false)
