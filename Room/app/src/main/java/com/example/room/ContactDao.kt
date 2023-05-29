@@ -5,7 +5,7 @@ import androidx.room.*
 
 @Dao
 interface ContactDao {
-    @Insert (onConflict = OnConflictStrategy.REPLACE)
+    @Insert (onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertContact(Contact : Contact)
 
     @Update
