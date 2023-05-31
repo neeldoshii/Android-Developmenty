@@ -16,6 +16,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
+    var i:Int=0
     lateinit var dataBase:EmpDatabase;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,17 +31,19 @@ class MainActivity : AppCompatActivity() {
 
 
         GlobalScope.launch {
-            dataBase.empDataAccess().insertData(EmpData(0, "Neel", "Doshi", 12121))
+            dataBase.empDataAccess().insertData(EmpData(0, "yttyt", "Doshi", 12121))
 
         }
-//        dataBase.empDataAccess().getAll().observe(this, Observer {
-//
-//        })    // Live data alreadfy works on background thread so no need to add inside global scope
+    // Live data alreadfy works on background thread so no need to add inside global scope
 
-        dataBase.empDataAccess().getAll().observe(this, Observer { empDataList ->
-            RecyclerView.adapter = RecycleAdapter(empDataList.toString())
+        val a = dataBase.empDataAccess().getAll().observe(this, Observer {
+                it -> RecyclerView.adapter = RecycleAdapter(it)
+
         })
+
         //RecyclerView.adapter = RecycleAdapter()
         RecyclerView.layoutManager=LinearLayoutManager(this)
     }
+
+
 }
