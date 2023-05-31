@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView.*
 import com.example.recycler_room.DataBase.EmpData
 import com.example.recycler_room.R
 
+
+//class RecycleAdapter(val list: List<EmpData>, val flist:List<EmpData>,and so on) : Adapter<RecycleAdapter.Vholder>()
+
 class RecycleAdapter(val list: List<EmpData>) : Adapter<RecycleAdapter.Vholder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Vholder {

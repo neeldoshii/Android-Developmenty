@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-        //RecyclerView.adapter = RecycleAdapter()
+        //RecyclerView.adapter = RecycleAdapter(Listdata,flist,lList,PhnList)
         RecyclerView.layoutManager=LinearLayoutManager(this)
     }
 
