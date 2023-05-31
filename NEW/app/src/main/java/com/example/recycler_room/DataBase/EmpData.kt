@@ -8,5 +8,5 @@ data class EmpData(
     @PrimaryKey(autoGenerate = true) val id:Int,
     val fName:String,
     val lName:String,
-    val phoneNo :Int
+    val phoneNo :String
 )

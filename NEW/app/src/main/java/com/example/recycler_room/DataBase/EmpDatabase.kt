@@ -5,7 +5,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [EmpData::class], version = 1)
+@Database(entities = [EmpData::class], version = 2)
 abstract class EmpDatabase:RoomDatabase(){
     abstract fun empDataAccess() : EmpDao
 
