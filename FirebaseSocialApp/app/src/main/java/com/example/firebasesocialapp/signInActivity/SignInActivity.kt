@@ -28,6 +28,8 @@ class SignInActivity : AppCompatActivity() {
         mAuth = Firebase.auth
         var btnLoginWithGoogle:Button = findViewById(R.id.btnLoginWithGoogle)
 
+
+
 //        BeginSignInRequest.builder()
 //            .setGoogleIdTokenRequestOptions(
 //                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
@@ -69,7 +71,7 @@ class SignInActivity : AppCompatActivity() {
                     .setFilterByAuthorizedAccounts(false)
                     .build()
             )
-            // Automatically sign in when exactly one credential is retrieved.
+             //Automatically sign in when exactly one credential is retrieved.
             .setAutoSelectEnabled(true)
             .build()
 
