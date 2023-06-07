@@ -1,21 +1,17 @@
 package com.example.firebase
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,12 +24,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val button: Button = findViewById(R.id.signInWithGoogle)
         auth = FirebaseAuth.getInstance()
+
+        val currentuser = FirebaseAuth.getInstance().currentUser
+
+
+
+
+
         val gso =
             GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail()
                 .requestProfile()
                 .requestIdToken(getString(R.string.default_web_client_id)).build()
 
-//        googleSignInClient = GoogleSignIn.getClient(this, gso)
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+
 
         val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
 
@@ -64,9 +69,11 @@ class MainActivity : AppCompatActivity() {
 //                            if (currentuser != null) {
                                 intent = Intent(this, MainActivity2::class.java)
                                 startActivity(intent)
+                                finish()
 //                            }
+
                         } else {
-                            Toast.makeText(this, "some error", Toast.LENGTH_SHORT).show()
+//                            Toast.makeText(this, "some error", Toast.LENGTH_SHORT).show()
                         }
 
 
@@ -77,10 +84,29 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+
+
+
+
+
             button.setOnClickListener() {
+
+//                val currentuser = FirebaseAuth.getInstance().currentUser
+
+
                 //Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show()
 
+
+
+                //val currentuser = FirebaseAuth.getInstance().currentUser
+
+
+
+
+
                 val signIn = googleSignInClient.signInIntent
+
 
 //            startActivity(signIn)
                 launcher.launch(signIn)
@@ -89,5 +115,11 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
 }
+
+
 
