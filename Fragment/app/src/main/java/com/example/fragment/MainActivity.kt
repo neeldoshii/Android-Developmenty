@@ -3,6 +3,8 @@ package com.example.fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.fragment.Fragments.FirstFragment
+import com.example.fragment.Fragments.SecondFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     FragmentBtn1.setOnClickListener(){
 //        val fragmentManager = supportFragmentManager
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragmentContainerView,FirstFragment())
+        fragmentTransaction.replace(R.id.fragmentContainerView, FirstFragment())
         fragmentTransaction.commit()
 
     }
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         FragmentBtn2.setOnClickListener(){
 //        val fragmentManager = supportFragmentManager
             val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentContainerView,SecondFragment())
+            fragmentTransaction.replace(R.id.fragmentContainerView, SecondFragment())
             fragmentTransaction.commit()
 
         }

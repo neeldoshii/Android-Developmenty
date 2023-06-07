@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterFragment"
+    android:orientation="vertical"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/regTxtView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/teal_700"
+        android:text="Login"
+        android:layout_margin="25dp"
+
+        />
+
+    <TextView
+        android:id="@+id/homeScreen"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/teal_700"
+        android:text="Home"
+        android:layout_margin="25dp"/>
+
+</LinearLayout>
